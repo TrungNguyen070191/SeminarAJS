@@ -20,9 +20,9 @@ app.config(function ($routeProvider) {
             templateUrl: "/app/components/users.html",
             controller: "usersCtrl"
         })
-        .when("/courses", {
-            templateUrl: "/app/components/courses.html",
-            controller: ""
+        .when("/products", {
+            templateUrl: "/app/components/products.html",
+            controller: "productsCtrl"
         })
         
 });
