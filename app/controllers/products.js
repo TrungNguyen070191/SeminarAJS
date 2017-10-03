@@ -10,11 +10,23 @@
 			{ name: 'bra_Samsung', value: 'Samsung' },
 			{ name: 'bra_Black Berry', value: 'Black Berry' }];
 
-
         var loadData = function () {
             productsService.getProducts().then(function (data) {
                 $scope.data = data;
             });
+        };
+
+        // Filter product by price
+        var filterByPrice = function(maxPrice){
+            var result = [];
+            if(maxPrice!=0){
+                angular.forEach($scope.data,function(item) {
+                    if(item.Price <= maxPrice){
+                        result.push(item);
+                    }
+                }, this);
+            }
+            return result;
         };
 
         loadData();

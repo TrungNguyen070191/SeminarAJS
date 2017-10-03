@@ -1,0 +1,18 @@
+    <div>
+        <button type="button" class="btn btn-primary" ng-click="changeAction('add',null)">Create New User</button>
+    </div>
+    <!--Form -->
+    <div ng-show='showAction'>
+        <h1>{{header}}</h1>
+        <table class="table ">
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" name="txtName" class="form-control" ng-model="data.name" /></td>
+            </tr>
+            <!--<tr>
+                <td>Age:</td>
+                <td><input type="text" name="txtCountry" class="form-control" ng-model="user.age" /></td>
+            </tr>-->
+        </table>
+        <button type="button" name="btnSave" class="btn btn-infor" ng-click="saveAction(data)">Save</button>
+    </div>

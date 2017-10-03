@@ -33,6 +33,21 @@
                     <input class="form-control " id="navbarInput-01" type="search" ng-model="searchString" placeholder="Search">
                 </div>
             </div>
+            <div>
+                <table>
+                    <tr>
+                        <td><label> Max Price: </label></td>
+                        <td>
+                            <div class="input-group" style="margin:0 5px;">
+                                <input type="text" class="form-control" placeholder="0" ng-model="searchPrice" aria-label="Search for...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-secondary" type="button">Search!</button>
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <!--<button type="button" class="btn btn-default btn-sm" ng-click="vm.switchMode(2)" style="background-color:#1abc9c">
 			    <span class="fui-list-columned" style="color:#ffffff"></span>
 		    </button>-->
@@ -40,10 +55,10 @@
     </div>
     <div class="col-lg-100 col-md-100 col-sm-100 col-xs-100 no-padding">
         <div>
-            <div ng-repeat="phone in data | nameFilter: searchString| nameFilter: vm.searchBrand.name">
-                <div class="col-lg-23 col-md-22 col-sm-22 col-xs-45 panel panel-default product-item" style="margin:9px">
+            <div ng-repeat="phone in data | filter: filterByPrice(searchPrice) | nameFilter: searchString| nameFilter: vm.searchBrand.name">
+                <div class="col-lg-23 col-md-22 col-sm-22 col-xs-45 " style="margin:9px">
                     <div class="col-lg-100 no-padding">
-                        <img ng-src="{{phone.url}}" alt="..." class="img-product img-thumbnail">
+                        <img ng-src="{{phone.url}}" alt="..." class="img-thumbnail">
                     </div>
                     <div class="col-lg-100 no-padding text-center">
                         <h2 class="no-padding no-margin" style="font-size:21px">{{phone.name}}</h2>
