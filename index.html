@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Seminar AJS Solution</title>
+    <meta name="description" content="Express Solution base on Boostrap 4.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Loading Bootstrap -->
+    <link href="/app/asserts/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>-->
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/app/asserts/js/angular-route.js"></script>
+    <script src="/app/asserts/js/bootstrap.min.js"></script>
+    <script src="./node_modules/angular-local-storage/dist/angular-local-storage.min.js"></script>
+
+    <!--Module-->
+    <script src="/app/modules/module.js"></script>
+    <!--Controller-->
+    <script src="/app/controllers/home.js"></script>
+    <script src="/app/controllers/users.js"></script>
+    <!--Services-->
+    <script src="/app/services/serviceHelper.js"></script>
+    <script src="/app/services/usersService.js"></script>
+    <!--Util-->
+    <script src="/app/util/constants.js"></script>
+</head>
+
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Angular JS Seminar</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#!home">Home</a></li>
+                <li><a href="#!users">Users</a></li>
+                <li><a href="#!courses">Courses</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid"  ng-app="appDemo">
+        <div ng-view></div>
+    </div>
+</body>
+
+</html>

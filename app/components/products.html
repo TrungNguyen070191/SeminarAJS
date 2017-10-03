@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Seminar AJS Solution</title>
+    <meta name="description" content="Express Solution base on Boostrap 4.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Loading Bootstrap -->
+    <link href="/app/asserts/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>-->
+    <script src="/node_modules/angular/angular.js"></script>
+    <script src="/app/asserts/js/angular-route.js"></script>
+    <script src="/app/asserts/js/bootstrap.min.js"></script>
+
+    <script src="/app/modules/module.js"></script>
+</head>
+
+<body ng-app="appDemo" ng-controller=''>
+    <div class="container-fluid">
+        <h1>Products Page</h1>
+        <div class="col-lg-100 col-md-100 col-sm-100 col-xs-100 no-padding">
+            <div id="dropdownBrand" class="col-lg-20 col-md-20 col-sm-20 col-xs-100">
+                <div class="form-group">
+                    <select data-toggle="select" ng-model="vm.searchBrand" ng-options="x.value for x in vm.brands" class="form-control" style="min-width:100px"></select>
+                </div>
+            </div>
+            <div id="searchBar" class="col-lg-50 col-md-50 col-sm-50 col-xs-50 no-padding" style="margin-right:5px;">
+                <div class="input-group" style="width: 100%">
+                    <input class="form-control" id="navbarInput-01" type="search" ng-model="searchString" placeholder="Search">
+                </div>
+            </div>
+            <button type="button" class="btn btn-default btn-sm" ng-click="vm.switchMode(2)" style="background-color:#1abc9c">
+			<span class="fui-list-columned" style="color:#ffffff"></span>
+		    </button>
+        </div>
+    </div>
+    <div class="col-lg-100 col-md-100 col-sm-100 col-xs-100 no-padding">
+        <div ng-if="vm.mode===1">
+            <div ng-repeat="phone in vm.data | nameFilter: searchString| nameFilter: vm.searchBrand.name">
+                <div class="col-lg-23 col-md-22 col-sm-22 col-xs-45 panel panel-default product-item" style="margin:9px">
+                    <div class="col-lg-100 no-padding">
+                        <img ng-src="{{phone.url}}" alt="..." class="img-product img-thumbnail">
+                    </div>
+                    <div class="col-lg-100 no-padding text-center">
+                        <h2 class="no-padding no-margin" style="font-size:21px">{{phone.name}}</h2>
+                        <p class="no-padding no-margin" style="font-size:13px">{{phone.saledPrice}} {{phone.currency}}</p>
+
+                    </div>
+                    <div class="col-lg-100 no-padding no-margin detail">
+                        <button style="width:100%" data-toggle="modal" data-target="#buy-modal" class="btn btn-danger pink" ng-click="scope.show(phone.id)">Detail</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-show="vm.mode===2">
+            <div ng-repeat="phone in vm.data | nameFilter: searchString| nameFilter: vm.searchBrand.name">
+                <div class="col-lg-100 col-md-100 col-sm-100 col-xs-100 panel panel-default no-padding" style="margin:9px">
+                    <table class="table table-striped">
+                        <tr>
+                            <td style="padding: 3%"><img ng-src="{{phone.url}}" alt="..." class="img-product" style="height: 60px; max-width: 60px"></td>
+                            <td class="col-lg-20 col-md-20 col-sm-20 col-xs-20" style="padding: 5%">{{phone.name}}</td>
+                            <td class="col-lg-25 col-md-25 col-sm-25 col-xs-25 text-center" style="padding: 5%">{{phone.saledPrice}} {{phone.currency}}</td>
+                            <td class="col-lg-20 col-md-20 col-sm-20 col-xs-20 text-center" style="padding: 5%">{{phone.category}}</td>
+                            <td class="col-lg-20 col-md-20 col-sm-20 col-xs-20 text-center" style="padding: 5%">{{phone.status}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

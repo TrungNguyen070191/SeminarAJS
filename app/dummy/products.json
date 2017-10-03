@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "name": "Iphone 5",
+    "category": "Mobile",
+    "brand": "Apple",
+    "createdDate": "",
+    "updatedDate": "",
+    "status": "Secondhand",
+
+	"saledPrice": "200000",
+	"sellerPrice": "500000",
+    "currency": "VND",
+    "url": "/assert/img/images/iphone 7 plus.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Iphone 6",
+    "category": "Mobile",
+    "brand": "Apple",
+    "createdDate": "",
+    "updatedDate": "",
+    "status": "New",
+
+	"saledPrice": "200000",
+	"sellerPrice": "500000",
+    "currency": "VND",
+    "url":  "/assert/img/images/iphone 7 plus.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Note 7",
+    "category": "Mobile",
+    "brand": "Samsung",
+    "createdDate": "",
+    "updatedDate": "",
+    "status": "New",
+
+	"saledPrice": "200000",
+	"sellerPrice": "500000",
+    "currency": "VND",
+    "url":  "/assert/img/images/iphone 7 plus.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Ipad Mini 2",
+    "category": "Mobile",
+    "brand": "Apple",
+    "createdDate": "",
+    "updatedDate": "",
+    "status": "New",
+
+	"saledPrice": "200000",
+	"sellerPrice": "500000",
+    "currency": "VND",
+    "url":  "/assert/img/images/iphone 7 plus.jpg"
+  }
+]
