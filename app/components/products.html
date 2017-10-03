@@ -40,7 +40,7 @@
     </div>
     <div class="col-lg-100 col-md-100 col-sm-100 col-xs-100 no-padding">
         <div>
-            <div ng-repeat="phone in vm.data | nameFilter: searchString| nameFilter: vm.searchBrand.name">
+            <div ng-repeat="phone in data | nameFilter: searchString| nameFilter: vm.searchBrand.name">
                 <div class="col-lg-23 col-md-22 col-sm-22 col-xs-45 panel panel-default product-item" style="margin:9px">
                     <div class="col-lg-100 no-padding">
                         <img ng-src="{{phone.url}}" alt="..." class="img-product img-thumbnail">
