@@ -1,5 +1,5 @@
 <div class="container-fluid" ng-controller="usersCtrl">
-    <h1>User</h1>
+    <h1>User {{notify}}</h1>
     <table class="table table-striped">
         <thead>
             <th>Edit</th>
@@ -17,8 +17,8 @@
         </tbody>
     </table>
     <div>
-        <!--<button type="button" class="btn btn-primary" ng-click="changeAction('add',null)">Create New User</button>-->
-        <form-add></form-add>
+        <button type="button" class="btn btn-primary" ng-click="changeAction('add',null)">Create New User</button>
+        <!--<form-add></form-add>-->
     </div>
     <!--Form -->
     <div ng-show='showAction'>

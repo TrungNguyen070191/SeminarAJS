@@ -2,7 +2,7 @@
 // My style
 (function (app) {
 
-    var usersCtrl = function ($scope, $http, usersService) {//
+    var usersCtrl = function ($rootScope, $scope, $http, usersService) {//
         var loadData = function () {
             usersService.getUsers().then(function (data) {
                 $scope.users = data;
@@ -25,6 +25,12 @@
         $scope.header = '';
         $scope.showAction = false;
         $scope.action = '';
+        //$scope.notify = '';
+
+        // Execute broadcast
+        $rootScope.$on("NOTIFY",function(){
+            $rootScope.notify = 'Called';
+        });
 
         $scope.changeAction = function (action, user) {
             $scope.showAction = true;
@@ -65,7 +71,7 @@
         loadData();
     };
 
-    app.controller('usersCtrl', ('$scope', '$http', 'usersService', usersCtrl));//
+    app.controller('usersCtrl', ('$rootScope', '$scope', '$http', 'usersService', usersCtrl));//
 
 })(angular.module('appDemo'));
 

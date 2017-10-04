@@ -10,11 +10,11 @@ app.config(function ($routeProvider) {
     $routeProvider
         .when("/", {
             templateUrl: "/app/components/home.html",
-            controller: ""
+            controller: "homeCtrl"
         })
         .when("/home", {
             templateUrl: "/app/components/home.html",
-            controller: ""
+            controller: "homeCtrl"
         })
         .when("/users", {
             templateUrl: "/app/components/users.html",

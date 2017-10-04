@@ -7,20 +7,20 @@
     "createdDate": "",
     "updatedDate": "",
     "status": "Secondhand",
-    "saledPrice": "200000",
+    "saledPrice": "2500000",
     "sellerPrice": "500000",
     "currency": "VND",
-    "url": "/app/images/iphone 7 plus.jpg"
+    "url": "/app/images/iphone5.jpg"
   },
   {
     "id": "2",
-    "name": "Iphone 6",
+    "name": "Iphone 7",
     "category": "Mobile",
     "brand": "Apple",
     "createdDate": "",
     "updatedDate": "",
     "status": "New",
-    "saledPrice": "200000",
+    "saledPrice": "6000000",
     "sellerPrice": "500000",
     "currency": "VND",
     "url": "/app/images/iphone 7 plus.jpg"
@@ -33,22 +33,22 @@
     "createdDate": "",
     "updatedDate": "",
     "status": "New",
-    "saledPrice": "200000",
+    "saledPrice": "8000000",
     "sellerPrice": "500000",
     "currency": "VND",
-    "url": "/app/images/iphone 7 plus.jpg"
+    "url": "/app/images/note72.jpg"
   },
   {
     "id": "4",
-    "name": "Ipad Mini 2",
+    "name": "Ipad Air 2",
     "category": "Mobile",
     "brand": "Apple",
     "createdDate": "",
     "updatedDate": "",
     "status": "New",
-    "saledPrice": "200000",
+    "saledPrice": "5000000",
     "sellerPrice": "500000",
     "currency": "VND",
-    "url": "/app/images/iphone 7 plus.jpg"
+    "url": "/app/images/ipadair2.jpg"
   }
 ]
