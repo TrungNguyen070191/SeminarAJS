@@ -25,6 +25,7 @@
                         result.push(item);
                     }
                 }, this);
+                alert('AAA');
             }
             return result;
         };
